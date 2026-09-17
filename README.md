@@ -76,15 +76,15 @@ For file permissions, I used separate user groups and permission groups. For exa
 
 I created a Group Policy Object that prevents users in the selected OU from accessing Control Panel and PC settings.
 
-![Disable Control Panel GPO](screenshots/gpo/disable-control-panel-gpo.png)
+![Disable Control Panel GPO](disable-control-panel-gpo.png)
 
 The policy was refreshed on the client using `gpupdate /force` and verified with `gpresult /r`.
 
-![GPO validation](screenshots/gpo/gpupdate-gpresult-validation.png)
+![GPO validation](gpupdate-gpresult-validation.png)
 
 The result was then tested directly on the Windows 10 client.
 
-![GPO tested on client](screenshots/gpo/control-panel-blocked-client.png)
+![GPO tested on client](control-panel-blocked-client.png)
 
 This demonstrated the full workflow:
 
@@ -108,17 +108,17 @@ I created an HR network share and assigned access through Active Directory secur
 
 The `DL_HR_Modify` group was granted Change and Read share permissions.
 
-![HR share permissions](screenshots/permissions/hr-share-permissions.png)
+![HR share permissions](hr-share-permissions.png)
 
 ### Access validation
 
 A user belonging to the authorized group was able to access the share and create a file:
 
-![Authorized access](screenshots/permissions/authorized-user-access.png)
+![Authorized access](authorized-user-access.png)
 
 A user outside the authorized group was denied access:
 
-![Unauthorized access denied](screenshots/permissions/unauthorized-user-denied.png)
+![Unauthorized access denied](unauthorized-user-denied.png)
 
 This allowed me to practice group-based access control and verify permissions from the end-user side.
 
@@ -141,23 +141,23 @@ The Windows Server DHCP role provides automatic network configuration to domain 
 
 ### Address Pool
 
-![DHCP address pool](screenshots/networking/dhcp-address-pool.png)
+![DHCP address pool](dhcp-address-pool.png)
 
 ### Scope Options
 
 DHCP distributes the Domain Controller as the client's default gateway and DNS server.
 
-![DHCP scope options](screenshots/networking/dhcp-scope-options.png)
+![DHCP scope options](dhcp-scope-options.png)
 
 ### Client Configuration and Lease Verification
 
 `CLIENT01` received its configuration dynamically from the DHCP server.
 
-![DHCP client configuration](screenshots/networking/dhcp-client-config.png)
+![DHCP client configuration](dhcp-client-config.png)
 
 The lease was also verified from the server side.
 
-![DHCP lease](screenshots/networking/dhcp-lease.png)
+![DHCP lease](dhcp-lease.png)
 
 ---
 
@@ -167,7 +167,7 @@ The Domain Controller also provides DNS for the `lab.local` domain.
 
 Domain clients use `10.0.0.1` as their DNS server. This allows them to locate domain services and resolve internal hostnames. External name resolution was also tested from the client.
 
-![External DNS resolution](screenshots/dns/external-name-resolution.png)
+![External DNS resolution](external-name-resolution.png)
 
 A future cleanup task is to add reverse lookup records and further refine DNS registration for the server's secondary RRAS interface.
 
@@ -177,11 +177,11 @@ A future cleanup task is to add reverse lookup records and further refine DNS re
 
 The Windows Server has separate internal and external network connectivity. Routing and Remote Access was configured with NAT so that the isolated domain client can access the Internet through the server.
 
-![RRAS NAT](screenshots/networking/rras-nat.png)
+![RRAS NAT](rras-nat.png)
 
 External connectivity was verified from `CLIENT01`.
 
-![Internet connectivity test](screenshots/networking/internet-connectivity.png)
+![Internet connectivity test](internet-connectivity.png)
 
 ---
 
