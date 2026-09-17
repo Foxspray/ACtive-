@@ -169,7 +169,6 @@ Domain clients use `10.0.0.1` as their DNS server. This allows them to locate do
 
 ![External DNS resolution](external-name-resolution.png)
 
-A future cleanup task is to add reverse lookup records and further refine DNS registration for the server's secondary RRAS interface.
 
 ---
 
