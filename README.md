@@ -56,7 +56,7 @@ The lab includes:
 - a dedicated computer OU,
 - a Windows 10 client joined to the domain.
 
-![Active Directory structure](screenshots/active-directory/ou-users-groups-computers.png)
+![Active Directory structure](main/ou-users-groups-computers.png)
 
 ### Domain Join
 
