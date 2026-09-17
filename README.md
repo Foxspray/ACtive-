@@ -56,19 +56,19 @@ The lab includes:
 - a dedicated computer OU,
 - a Windows 10 client joined to the domain.
 
-![Active Directory structure](main/ou-users-groups-computers.png)
+![Active Directory structure](ou-users-groups-computers.png)
 
 ### Domain Join
 
 `CLIENT01` was configured to use the Domain Controller as its DNS server and successfully joined to `lab.local`.
 
-![Client joined to domain](screenshots/active-directory/client-domain-join.png)
+![Client joined to domain](client-domain-join.png)
 
 ### Group-based access model
 
 For file permissions, I used separate user groups and permission groups. For example, the `GG_HR` Global group is a member of the `DL_HR_Modify` Domain Local group, which is then used to assign access to the HR share.
 
-![Group nesting](screenshots/active-directory/group-nesting-hr.png)
+![Group nesting](group-nesting-hr.png)
 
 ---
 
