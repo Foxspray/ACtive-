@@ -242,7 +242,7 @@ This project gave me hands-on practice with:
 Planned improvements:
 
 - reverse DNS / PTR records,
-- cleanup of DNS registration for the secondary server interface,
+- Add reverse DNS and additional DNS validation
 - additional NTFS permission scenarios,
 - PowerShell-based Active Directory administration,
 - additional troubleshooting scenarios and documentation.
